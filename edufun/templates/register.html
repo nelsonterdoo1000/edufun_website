@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static '../static/main.css' %}">
+</head>
+<body>
+    <h1>You are Welcome to Our Website</h1>
+    <br>
+    <br>
+    <h2>We Would Like to Hear From You</h2>
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Personal Information</legend>
+            <p class="fp">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" class="entry">    
+            </p>
+            <br>
+            <p class="sp">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" class="entry">    
+            </p>
+            <br>
+            <p class="tp">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone" class="entry">    
+            </p>
+            <br>
+            <label for="sex">Sex:</label>
+            <select name="sex" id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <label for="message">Leave a Message:</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

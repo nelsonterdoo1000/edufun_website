@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: steelblue;
+    font-size: 1rem;
+    /* text-align: center; */
+    margin: 2rem;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: whitesmoke
+}
+fieldset {
+    display: grid;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 1rem;
+    border: 2px solid whitesmoke;
+}
+.entry {
+    border-radius: 5px;
+}
